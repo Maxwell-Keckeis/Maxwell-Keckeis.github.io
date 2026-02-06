@@ -127,9 +127,6 @@ img {
 
 /* FULL-WIDTH WHITE BACKGROUND */
 .about-section {
-  font-family: "Anton SC", sans-serif;
-  font-size: 18px;   /* try 18–20px */
-  line-height: 1.6;  /* improves readability */
   background: white;
   width: 100%;
   padding: 80px 0;   /* vertical spacing only */

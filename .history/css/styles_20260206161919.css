@@ -15,9 +15,9 @@ header {
     align-items: center;
     gap: 20px;
     padding: 48px;
-    background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -127,9 +127,6 @@ img {
 
 /* FULL-WIDTH WHITE BACKGROUND */
 .about-section {
-  font-family: "Anton SC", sans-serif;
-  font-size: 18px;   /* try 18–20px */
-  line-height: 1.6;  /* improves readability */
   background: white;
   width: 100%;
   padding: 80px 0;   /* vertical spacing only */
@@ -187,3 +184,7 @@ img {
   text-transform: uppercase;
 }
 
+@media (max-width: 600px){
+  :root{ --title-band-gap: 90px; }
+  .title-band__title{ font-size: 32px; letter-spacing: 0.35em; }
+}

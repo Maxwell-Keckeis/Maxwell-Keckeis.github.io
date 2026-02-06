@@ -15,9 +15,9 @@ header {
     align-items: center;
     gap: 20px;
     padding: 48px;
-    background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -125,65 +125,21 @@ img {
   transform: translateY(0);
 }
 
-/* FULL-WIDTH WHITE BACKGROUND */
-.about-section {
-  font-family: "Anton SC", sans-serif;
-  font-size: 18px;   /* try 18–20px */
-  line-height: 1.6;  /* improves readability */
+.about-content{
   background: white;
-  width: 100%;
-  padding: 80px 0;   /* vertical spacing only */
-}
-
-/* CENTERED CONTENT BLOCK */
-.about-content {
   color: black;
+
   max-width: 900px;
-  margin: 0 auto;    /* centers content */
+  margin: 80px auto;     /* centers, keeps black around it */
   padding: 48px;
+  border-radius: 12px;   /* optional */
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .about-section {
-    padding: 40px 0;
+/* Mobile: keep centered block, just reduce spacing */
+@media (max-width: 600px){
+  .about-content{
+    margin: 24px 16px;   /* keeps black margin on both sides */
+    padding: 24px;
+    border-radius: 10px; /* optional */
   }
-
-  .about-content {
-    padding: 24px 16px;
-  }
 }
-:root{
-  --title-band-gap: 120px;   /* tweak this until it feels like ~150% */
-  --content-max: 900px;      /* match your about-content width */
-}
-
-/* reusable band */
-.title-band{
-  background: black;
-  width: 100%;
-  padding-top: var(--title-band-gap);
-  padding-bottom: 32px;
-}
-
-.title-band__inner{
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-}
-
-.title-band--right  .title-band__inner{ justify-content: flex-end; }
-.title-band--center .title-band__inner{ justify-content: center; }
-.title-band--left   .title-band__inner{ justify-content: flex-start; }
-
-.title-band__title{
-  font-family: "Anton SC", sans-serif;
-  color: white;
-  margin: 0;
-  line-height: 1;
-  font-size: 40px;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-}
-
