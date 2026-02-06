@@ -8,99 +8,22 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
-
-      <style>
-
-        .anton-sc-regular {
-            font-family: "Anton SC", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        body {
-            background-color: black;
-            margin: 0;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 48px;
-            background-color: transparent;
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        nav {
-            margin-left: auto;
-        }
-
-        nav a {
-            font-family: 'Anton SC', sans-serif;
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            position: relative;
-        }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 100%;
-            height: 2px;
-            background-color: red;
-            opacity: 0;
-        }
-        nav a:hover::after {
-            opacity: 1;
-        }
-
-        main {
-            height: 200vh;
-            padding: 0 1rem;
-            box-sizing: border-box;
-            max-width: 800px;
-            margin: 0 auto;
-            font-family: 'Anton SC', sans-serif;
-            font-size: 15px;
-            color: white;
-            
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-      </style>
+      
+      <link rel="stylesheet" href="css/styles.css">
    </head>
    
    <body>
         <header>
             <div class="header-inner">
-                <h1>
+                    
+                <a href="./index.html">
                     <img src="./assets/images/max_logo.png" alt="logo for max" width="200" height="200">
-                </h1>
+                </a>
                 
                 <nav>
+                    <a href="./index.html">HOME</a>
+                    <a href="./projects.html">PROJECTS</a>
+                    <a href="./certificates.html">CERTIFICATES</a>
                     <a href="./contact.html">CONTACT</a>
                     <a href="./about.html">ABOUT</a>
                 </nav>
@@ -109,8 +32,17 @@
     
         <main>
             <article>
-                <h2>We are getting things squared away and appreciate your patience</h2>
                 <br>
+                <img src="./assets/images/2026_img.png" alt="image of 2026" width="300" height="300" style="transform: translate(-100px);">
+                <br>
+                <a class="project-card" href="./projects.html">
+                    <img src="assets/images/crooked-house-img.png" alt="Crooked House project screenshot" width="350" height="500">
+
+                    <div class="overlay">
+                        <h3>Crooked House</h3>
+                        <p>C++ ASCII adventure game</p>
+                    </div>
+                </a>
                 <h2>Whats to come:</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
