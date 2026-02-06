@@ -1,0 +1,124 @@
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 48px;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a {
+    font-family: 'Anton SC', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    opacity: 0;
+}
+nav a:hover::after {
+    opacity: 1;
+}
+
+main {
+    height: 200vh;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Anton SC', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card {
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  text-decoration: none;
+  background: black; /* fallback when image fades */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 300ms ease;
+}
+
+/* overlay container */
+.project-card .overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top/left/right/bottom: 0 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* hover behavior */
+.project-card:hover img {
+  opacity: 0;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
